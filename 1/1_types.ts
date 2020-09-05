@@ -55,4 +55,30 @@ let combinedValues: (a: number, b: number) => number;
 combinedValues = add;
 combinedValues(6, 6);
 
+//callback
+function callBack(num: number, callback: (numb: number) => void) {
+    return callback(num + 2);
+}
+
+// unknown type
+let userInput: unknown;
+let userName: string;
+userInput = 5;
+userInput = "Max";
+// userName = userInput - this gives us an error because userInput is a string but could be something else
+if ( typeof userInput === 'string') {
+    userName = userInput;
+}
+
+// never type - functions can return
+function generateError(message: string, code: number): never {
+    throw {message: message, errorCode: code};
+    //this error throw crashes our script - essentially never returns a value
+}
+generateError('An error occured', 500);
+
+// ! - telling TypeScript not to worry that something does not exist
+
+
+
 
