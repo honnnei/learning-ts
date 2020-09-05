@@ -37,6 +37,13 @@
 
 //no Emit on error - problematic files will not be generated
 
+// noImplicitAny - it ensures that we have to be sure about types
+
+//strict checks - about working with null values - e.g. querySelector("button")
+// option - using ! - tells ts that we know something is not null
+// good option if you're not sure - put it in an if statement:
+// const button = document.querySelector("button")
+// if (button) {}
 
 
 
